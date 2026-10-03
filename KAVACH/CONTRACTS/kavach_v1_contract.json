@@ -1,0 +1,20 @@
+{
+  "schema": "kavach.contract/v1",
+  "states": [
+    "OPEN",
+    "HOLD",
+    "REFUSE"
+  ],
+  "sdk": [
+    "status",
+    "evaluate",
+    "acquire",
+    "execute",
+    "verify_receipt"
+  ],
+  "invariants": [
+    "old_epoch_capability_never_executes_after_epoch_advance",
+    "current_trust_reappraised_before_protected_execution",
+    "root_material_not_exposed_by_public_api"
+  ]
+}

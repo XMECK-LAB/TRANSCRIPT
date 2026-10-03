@@ -1,0 +1,21 @@
+{
+  "schema": "kavach.security-profile/v1",
+  "product": "KAVACH V1",
+  "assurance_profile": "RESEARCH_REFERENCE",
+  "provider": "SOFTWARE_REFERENCE",
+  "supported_invariants": [
+    "KVC-001: prior-epoch capability cannot execute after epoch advance",
+    "execution re-appraises current trust state",
+    "capabilities are workload/capability/resource/epoch bound",
+    "root material is not exposed through the public SDK/API",
+    "receipt records are authenticated and hash chained"
+  ],
+  "evidence_sources": ["package manifest", "protected fixture digest", "structural presence/size checks", "runtime instance", "receipt lineage"],
+  "not_guaranteed": [
+    "resistance to a fully privileged hostile OS or same-user filesystem attacker",
+    "TPM/HSM/TEE-grade root isolation",
+    "remote hardware attestation",
+    "causal attribution of integrity changes",
+    "legal novelty or patentability"
+  ]
+}

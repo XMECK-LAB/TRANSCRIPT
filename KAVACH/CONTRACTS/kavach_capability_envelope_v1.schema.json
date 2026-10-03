@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "kavach.capability-envelope/v1",
+  "type": "object",
+  "required": ["schema","workload","capability","resource","epoch","decision_id","trust_context_digest","nonce","expires_ns","provider"],
+  "properties": {
+    "schema": {"const":"kavach.capability-envelope/v1"},
+    "workload":{"type":"string"}, "capability":{"type":"string"}, "resource":{"type":"string"},
+    "epoch":{"type":"integer","minimum":1}, "decision_id":{"type":"string"},
+    "trust_context_digest":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "policy_digest":{"type":"string"}, "evidence_predecessor":{"type":["string","null"]},
+    "nonce":{"type":"string"}, "expires_ns":{"type":"integer"},
+    "provider":{"const":"SOFTWARE_REFERENCE"}
+  },
+  "additionalProperties": false
+}
