@@ -1,0 +1,57 @@
+{
+  "construction_blocks": {
+    "A": "semantic kernel",
+    "B": "runtime+AIRS+K-LOCK+Evidence",
+    "C": "profiles+SDK/API+compatibility",
+    "D": "consumer conformance+ProofCheck"
+  },
+  "final_artifacts": [
+    "KAVACH_Setup.exe",
+    "KAVACH_RELEASE_V2_FINAL.zip"
+  ],
+  "final_release_gate": "real accepted external consumer + full regression + Windows lifecycle",
+  "information_architecture": {
+    "COMMAND": [
+      "Overview",
+      "Protection State",
+      "Guided Action"
+    ],
+    "PROOF": [
+      "Evidence",
+      "Trust Lab",
+      "ProofCheck"
+    ],
+    "SYSTEM": [
+      "Runtime",
+      "Providers",
+      "Integrations",
+      "SDK/API",
+      "Build & Assurance"
+    ],
+    "TRUST": [
+      "AIRS",
+      "Trust Core",
+      "Capabilities",
+      "K-LOCK"
+    ]
+  },
+  "product_modes": {
+    "A": "Integration Kit",
+    "B": "Public Demonstrator",
+    "C": "Authority Console",
+    "D": "Integration Topology"
+  },
+  "schema": "kavach.final-product-contract/v2",
+  "state": "KAVACH_FINAL_SOURCE_READY / EXTERNAL_INTEGRATION_HOLD / FINAL_RELEASE_NOT_YET_CLAIMED",
+  "version_chain": false,
+  "visual_system": {
+    "motion": "semantic runtime-driven only",
+    "name": "2050 Glass Authority System",
+    "palette": [
+      "ceramic white",
+      "deep sovereign blue",
+      "electric cyan/blue",
+      "controlled KAVACH orange"
+    ]
+  }
+}

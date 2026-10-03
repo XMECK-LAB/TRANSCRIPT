@@ -1,0 +1,173 @@
+{
+  "schema": "kavach-public-source-manifest/v2",
+  "version": "2.0.0",
+  "generated_utc": "2026-10-02T20:40:21.9088718Z",
+  "file_count": 33,
+  "files": [
+    {
+      "path": "contracts/FINAL_PRODUCT_CONTRACT.json",
+      "bytes": 1367,
+      "sha256": "4AEA0E5CA198AA793160542D969F4E4176F428A55ACAB7F84753A940AD62030C"
+    },
+    {
+      "path": "docs/CLAIM_BOUNDARY.md",
+      "bytes": 685,
+      "sha256": "E495756AA8B9FAB2D735020DB8132B7B4BD63BAECDC53E4D0961648D11C7728E"
+    },
+    {
+      "path": "docs/HISTORY.md",
+      "bytes": 646,
+      "sha256": "CF57BDF7E8A66F8F0480C6AD3CC29DBEF201F4EF3DF2209CE1454BC2AD38EAC1"
+    },
+    {
+      "path": "docs/NORMATIVE_CONTRACT.md",
+      "bytes": 3179,
+      "sha256": "1622FF1BE71DF257936ADC950F6987CB817D9C05C5A300EDB3662C49B1093CE9"
+    },
+    {
+      "path": "docs/RUNTIME_CONTRACT.md",
+      "bytes": 935,
+      "sha256": "8289A587BE6FC6505DF3A262821BD0E80249659389FBA49CFD8B672E907FCF1A"
+    },
+    {
+      "path": "docs/SUBSTRATE_CONTRACT.md",
+      "bytes": 859,
+      "sha256": "8C167FFA8FEE001586F8589E151F6EA02ED0594D4EDA581D4BD64B92A616D885"
+    },
+    {
+      "path": "docs/TRACEABILITY_MATRIX.md",
+      "bytes": 926,
+      "sha256": "08D2B76C30353237E51B949F2FBAD8327ABEE34D601CC46048B6EF4FE7FFC21B"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1395,
+      "sha256": "B45DA5D2F7324DB6DF95380F044FE761BCD408DB1011015CEFF5BBA73F3C6528"
+    },
+    {
+      "path": "sdk/README.md",
+      "bytes": 780,
+      "sha256": "471A1D578541D4799F8FABDC91A3D6BB52402CAB2D3FED956B30C145EF7D1F47"
+    },
+    {
+      "path": "sdk/reference_client.py",
+      "bytes": 510,
+      "sha256": "77F64C67CB98D4416FD6DA034E3F75EB2D708EDE8179AEBF46B135B9A68AC7EC"
+    },
+    {
+      "path": "src/kavach_runtime/__init__.py",
+      "bytes": 288,
+      "sha256": "98C15EB15FB361CB24D347C1D5A949523EBBF40F214034EC5EB011C1EA6C09E1"
+    },
+    {
+      "path": "src/kavach_runtime/airs.py",
+      "bytes": 2041,
+      "sha256": "42DC79BD1C386627CDCF55F4B8CD3171C5F0921C31319530D8C247029B134D23"
+    },
+    {
+      "path": "src/kavach_runtime/evidence.py",
+      "bytes": 4993,
+      "sha256": "069DA78B4E9CCF634CE73CD4139C2F33718B66F4719A2F94A09ED55E7BF7CED3"
+    },
+    {
+      "path": "src/kavach_runtime/ipc.py",
+      "bytes": 3074,
+      "sha256": "ABD3B9743C403BE95E01526D1A4CBB7C1D517C4D7B734918786D60C2F67C35BD"
+    },
+    {
+      "path": "src/kavach_runtime/provider.py",
+      "bytes": 2092,
+      "sha256": "0136518199BF8238B5CE7623E87C76BABAF98F77549850CD98BDA5C00118D6FB"
+    },
+    {
+      "path": "src/kavach_runtime/runtime.py",
+      "bytes": 8310,
+      "sha256": "2C0BE84D827AEC2C81420237145EB3D31FF0DE02BA058ABD478C6C805B0EB826"
+    },
+    {
+      "path": "src/kavach_runtime/state.py",
+      "bytes": 2453,
+      "sha256": "D2B01E3E481A71B22F56C47941BE4B72C8B4D2AC72157D5F282439E1D0531FF3"
+    },
+    {
+      "path": "src/kavach_runtime/util.py",
+      "bytes": 1119,
+      "sha256": "7907BDE93D7E5062285CE4C164138FC2D8D485E893E8D5D65B97D16C656C28F1"
+    },
+    {
+      "path": "src/kavach_semantic/__init__.py",
+      "bytes": 68,
+      "sha256": "2F3A64AA1E6CCFD2E314CE948E375DCEFF4E721604B64A856B5F65CBD215C532"
+    },
+    {
+      "path": "src/kavach_semantic/canonical.py",
+      "bytes": 1817,
+      "sha256": "BD420D2A8EC9F98877DF6F22B6637E76CA5A2C04D4511C2500E052771184A410"
+    },
+    {
+      "path": "src/kavach_semantic/compat_v1.py",
+      "bytes": 195,
+      "sha256": "3FA46D5C0ADFE83EBB8F196FFB9B270F57E231525075EB56CB28BB95CB848BEA"
+    },
+    {
+      "path": "src/kavach_semantic/engine.py",
+      "bytes": 5824,
+      "sha256": "4CACFDCA0C5E06896CA807363B0CD7AFFDC463656C72502BAA6C7B1037948947"
+    },
+    {
+      "path": "src/kavach_semantic/model.py",
+      "bytes": 4037,
+      "sha256": "0ABE0D672C42AC33BB70FAB39E3E91ACC71D9E9A96ADA2BE7BE360970937C1EA"
+    },
+    {
+      "path": "src/kavach_substrate/__init__.py",
+      "bytes": 146,
+      "sha256": "335F054577C74934A6BA3B7347F3869375E11FFCE8D410C6B2B7CBA507E7FEB5"
+    },
+    {
+      "path": "src/kavach_substrate/adapters.py",
+      "bytes": 3130,
+      "sha256": "3EE8AFAF33076F44968A3B856A524FF6E03626C38F9827FC30C6451C38B0E632"
+    },
+    {
+      "path": "src/kavach_substrate/compatibility.py",
+      "bytes": 1013,
+      "sha256": "6F2C3B003D06A344F2D93A4CF68C24B08265CCCAA9C02457EED2A2479F4C8B19"
+    },
+    {
+      "path": "src/kavach_substrate/extensions.py",
+      "bytes": 3891,
+      "sha256": "E5426A5198F0CC92A47493047ABA6CD63EC9BF039B247360562BCDF801886905"
+    },
+    {
+      "path": "src/kavach_substrate/passport.py",
+      "bytes": 964,
+      "sha256": "1DE26B89BBCAAE20A96F0EA3ECB61811A0BFA618C00B4CD60E101303BEDF5A02"
+    },
+    {
+      "path": "src/kavach_substrate/profiles.py",
+      "bytes": 3383,
+      "sha256": "9A0836B744C212E784468F71B540E8E9DD065E62641EFA124B54F58634533274"
+    },
+    {
+      "path": "src/kavach_substrate/sdk.py",
+      "bytes": 3190,
+      "sha256": "EF50976FB3D18276A068B6E393EE01898788BA56E8A744E91CA081F8C0EBAF89"
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "bytes": 12116,
+      "sha256": "2741FF8DFE141840FB436D3F9C474D44FD20625F0849D8AACCD4B2BF6C9A4DB5"
+    },
+    {
+      "path": "tests/test_semantics.py",
+      "bytes": 6453,
+      "sha256": "8B8AC7638436AB9E603FCF86BBE4D420A230505CB6CD4249BEEA3BB6BADA24B9"
+    },
+    {
+      "path": "tests/test_substrate.py",
+      "bytes": 7833,
+      "sha256": "67C05CB5AF62804F0F0F6DBA0634CEA57A8804A0CBC4567E79A7DFEDEDE60BFE"
+    }
+  ]
+}
