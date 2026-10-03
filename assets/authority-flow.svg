@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+<title id="t">KAVACH authority lifecycle</title><desc id="d">Identity and context flow through AIRS, KAVACH, K-LOCK, execution and evidence</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7fbff"/><stop offset="1" stop-color="#edf6ff"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-opacity=".12"/></filter></defs>
+<rect width="1280" height="360" rx="26" fill="url(#bg)"/>
+<g font-family="Segoe UI,Inter,Arial,sans-serif" text-anchor="middle">
+  <g filter="url(#s)">
+    <rect x="48" y="118" width="180" height="110" rx="22" fill="#fff" stroke="#c8e6ff"/>
+    <rect x="278" y="118" width="180" height="110" rx="22" fill="#fff" stroke="#c8e6ff"/>
+    <rect x="508" y="104" width="210" height="138" rx="26" fill="#0c5eb8"/>
+    <rect x="768" y="118" width="180" height="110" rx="22" fill="#fff" stroke="#ffcc98"/>
+    <rect x="998" y="118" width="180" height="110" rx="22" fill="#fff" stroke="#c8e6ff"/>
+  </g>
+  <text x="138" y="158" font-size="16" fill="#54708c">IDENTITY</text><text x="138" y="190" font-size="22" font-weight="700" fill="#09213a">CONTEXT</text>
+  <text x="368" y="158" font-size="16" fill="#54708c">TRUST APPRAISAL</text><text x="368" y="190" font-size="24" font-weight="700" fill="#0c5eb8">AIRS</text>
+  <text x="613" y="150" font-size="18" fill="#bfe4ff">AUTHORITY DECISION</text><text x="613" y="187" font-size="30" font-weight="700" fill="#fff">KAVACH</text><text x="613" y="217" font-size="15" fill="#e9f6ff">OPEN · HOLD · REFUSE</text>
+  <text x="858" y="158" font-size="16" fill="#8a5a22">BOUNDED AUTHORITY</text><text x="858" y="190" font-size="24" font-weight="700" fill="#d86d00">K-LOCK</text>
+  <text x="1088" y="158" font-size="16" fill="#54708c">PROTECTED ACTION</text><text x="1088" y="190" font-size="23" font-weight="700" fill="#09213a">EXECUTION</text>
+  <g stroke="#398bd4" stroke-width="3" fill="none"><path d="M228 173h45"/><path d="M458 173h45"/><path d="M718 173h45"/><path d="M948 173h45"/></g>
+  <g fill="#398bd4"><path d="M273 173l-10-7v14z"/><path d="M503 173l-10-7v14z"/><path d="M763 173l-10-7v14z"/><path d="M993 173l-10-7v14z"/></g>
+  <path d="M1088 230v55H613v-38" fill="none" stroke="#ff8618" stroke-width="3"/>
+  <path d="M613 247l-7 11h14z" fill="#ff8618"/>
+  <text x="850" y="310" font-size="17" font-weight="600" fill="#b45d00">AUTHENTICATED EVIDENCE / RECEIPT</text>
+  <text x="640" y="62" font-size="27" font-weight="700" fill="#0a2948">Trust ≠ Authority · Authority ≠ Execution</text>
+</g>
+</svg>

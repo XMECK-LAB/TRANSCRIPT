@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-labelledby="t d">
+<title id="t">TRANSCRIPT / KAVACH</title>
+<desc id="d">Governed execution infrastructure with continuity-bound authority and evidence</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#061427"/><stop offset=".48" stop-color="#0b2b52"/><stop offset="1" stop-color="#07101e"/></linearGradient>
+  <radialGradient id="orb"><stop stop-color="#47b8ff" stop-opacity=".95"/><stop offset=".5" stop-color="#1168d8" stop-opacity=".45"/><stop offset="1" stop-color="#1168d8" stop-opacity="0"/></radialGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff" stop-opacity=".17"/><stop offset="1" stop-color="#ffffff" stop-opacity=".04"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="26"/></filter>
+</defs>
+<rect width="1280" height="520" rx="30" fill="url(#bg)"/>
+<circle cx="1010" cy="170" r="210" fill="url(#orb)" filter="url(#blur)"/>
+<circle cx="1090" cy="385" r="120" fill="#ff8a1c" opacity=".14" filter="url(#blur)"/>
+<path d="M0 410 C240 340 360 470 620 390 S1030 300 1280 360" fill="none" stroke="#4bbcff" stroke-opacity=".2" stroke-width="2"/>
+<rect x="68" y="62" width="1144" height="396" rx="28" fill="url(#glass)" stroke="#d9f0ff" stroke-opacity=".18"/>
+<g font-family="Segoe UI,Inter,Arial,sans-serif" fill="#fff">
+  <text x="120" y="150" font-size="22" letter-spacing="5" fill="#72c7ff">XMECK-LAB / TRANSCRIPT</text>
+  <text x="120" y="227" font-size="64" font-weight="700">Governed Execution</text>
+  <text x="120" y="292" font-size="64" font-weight="700">Infrastructure</text>
+  <text x="122" y="345" font-size="26" fill="#cfeaff">KAVACH 2.0 · Continuity-Bound Authority &amp; Protection</text>
+  <text x="122" y="394" font-size="22" font-weight="600" fill="#ff9b2f">AUTHORITY BEFORE PROTECTED ACTION.</text>
+</g>
+<g transform="translate(950 235)">
+  <circle r="92" fill="#061427" stroke="#69c5ff" stroke-width="2" opacity=".92"/>
+  <circle r="68" fill="none" stroke="#2d8fe8" stroke-width="10" stroke-dasharray="130 36"/>
+  <circle r="42" fill="none" stroke="#ff9228" stroke-width="6" stroke-dasharray="80 28"/>
+  <circle r="10" fill="#fff"/>
+</g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="600" viewBox="0 0 1280 600" role="img" aria-labelledby="t d">
+<title id="t">KAVACH protected-action demonstration</title><desc id="d">Reference demo showing a request becoming an OPEN decision, bounded authority, execution and evidence</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071426"/><stop offset="1" stop-color="#102c4c"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-opacity=".3"/></filter></defs>
+<rect width="1280" height="600" rx="28" fill="url(#bg)"/>
+<g font-family="Segoe UI,Inter,Arial,sans-serif">
+<text x="70" y="78" font-size="30" font-weight="700" fill="#fff">Protected action · reference execution</text>
+<text x="70" y="111" font-size="17" fill="#98cfff">A bounded authority lifecycle — not an ambient permission flag</text>
+<g filter="url(#s)">
+<rect x="70" y="150" width="350" height="330" rx="24" fill="#0d2138" stroke="#244d72"/>
+<rect x="465" y="150" width="350" height="330" rx="24" fill="#0d2138" stroke="#244d72"/>
+<rect x="860" y="150" width="350" height="330" rx="24" fill="#0d2138" stroke="#244d72"/>
+</g>
+<text x="100" y="194" font-size="16" fill="#6ebdff">01 · REQUEST</text>
+<text x="100" y="231" font-size="24" font-weight="700" fill="#fff">generation.commit</text>
+<text x="100" y="274" font-size="16" fill="#b8d5ec">project</text><text x="250" y="274" font-size="16" fill="#fff">reference.project</text>
+<text x="100" y="307" font-size="16" fill="#b8d5ec">workload</text><text x="250" y="307" font-size="16" fill="#fff">reference.runtime</text>
+<text x="100" y="340" font-size="16" fill="#b8d5ec">assurance</text><text x="250" y="340" font-size="16" fill="#fff">SOFTWARE_REFERENCE</text>
+<text x="100" y="373" font-size="16" fill="#b8d5ec">resource</text><text x="250" y="373" font-size="16" fill="#fff">generation:1</text>
+<text x="495" y="194" font-size="16" fill="#6ebdff">02 · AUTHORITY</text>
+<rect x="495" y="222" width="120" height="42" rx="21" fill="#0d6d43"/><text x="555" y="249" text-anchor="middle" font-size="18" font-weight="700" fill="#b9ffd9">OPEN</text>
+<text x="495" y="305" font-size="16" fill="#b8d5ec">continuity</text><text x="645" y="305" font-size="16" fill="#fff">p1 · w2 · r5</text>
+<text x="495" y="338" font-size="16" fill="#b8d5ec">provider</text><text x="645" y="338" font-size="16" fill="#fff">software-reference</text>
+<text x="495" y="371" font-size="16" fill="#b8d5ec">one-use</text><text x="645" y="371" font-size="16" fill="#fff">true</text>
+<text x="495" y="404" font-size="16" fill="#b8d5ec">revalidate</text><text x="645" y="404" font-size="16" fill="#ff9c35">at execution</text>
+<text x="890" y="194" font-size="16" fill="#6ebdff">03 · EVIDENCE</text>
+<text x="890" y="233" font-size="22" font-weight="700" fill="#fff">Authenticated receipt</text>
+<text x="890" y="280" font-size="16" fill="#b8d5ec">authority ancestry</text><text x="1160" y="280" text-anchor="end" font-size="16" fill="#fff">bound</text>
+<text x="890" y="313" font-size="16" fill="#b8d5ec">continuity</text><text x="1160" y="313" text-anchor="end" font-size="16" fill="#fff">recorded</text>
+<text x="890" y="346" font-size="16" fill="#b8d5ec">result</text><text x="1160" y="346" text-anchor="end" font-size="16" fill="#fff">committed</text>
+<text x="890" y="379" font-size="16" fill="#b8d5ec">authenticator</text><text x="1160" y="379" text-anchor="end" font-size="16" fill="#fff">verified</text>
+<path d="M420 315h40M815 315h40" stroke="#55b5ff" stroke-width="3"/><path d="M460 315l-10-7v14zM855 315l-10-7v14z" fill="#55b5ff"/>
+<rect x="70" y="515" width="1140" height="1" fill="#2a5377"/>
+<text x="70" y="555" font-size="17" fill="#9bc8e8">KAVACH 2.0 · public software-reference semantics</text><text x="1210" y="555" text-anchor="end" font-size="17" font-weight="700" fill="#ff9630">AUTHORITY BEFORE PROTECTED ACTION.</text>
+</g></svg>
