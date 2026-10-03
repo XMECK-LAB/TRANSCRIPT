@@ -1,0 +1,71 @@
+name: Bug report
+description: Report a reproducible defect in the public TRANSCRIPT / KAVACH surface.
+title: "[bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a reproducible issue. Do not include secrets, private evidence, or exploit details for a security vulnerability here.
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - KAVACH semantic kernel
+        - KAVACH runtime
+        - KAVACH substrate / SDK
+        - Public tests
+        - Documentation
+        - Release artifact
+        - Other public repository surface
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / ref
+      placeholder: "main, kavach-v2.0.0, kavach-v1.0.0, or exact commit"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "Windows 11 + Python 3.12 / Ubuntu + Python 3.11"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Provide the smallest public reproduction you can.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Public-boundary confirmation
+      options:
+        - label: I have not included private credentials, private evidence, or non-public source material.
+          required: true

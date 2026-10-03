@@ -1,0 +1,50 @@
+name: Public Reference CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-reference-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+        python:
+          - "3.11"
+          - "3.12"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Public reference tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}/KAVACH/src
+        run: python -m unittest discover KAVACH/tests -v
+
+      - name: Protected-action demo smoke test
+        env:
+          PYTHONPATH: ${{ github.workspace }}/KAVACH/src
+        run: python KAVACH/examples/protected_action_demo.py --check

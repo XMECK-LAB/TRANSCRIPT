@@ -4,6 +4,10 @@
 
 <h1 align="center">TRANSCRIPT</h1>
 
+<p align="center">
+  <a href="https://github.com/XMECK-LAB/TRANSCRIPT/actions/workflows/public-reference-ci.yml"><img src="https://github.com/XMECK-LAB/TRANSCRIPT/actions/workflows/public-reference-ci.yml/badge.svg" alt="Public Reference CI" /></a>
+</p>
+
 <p align="center"><strong>Governed Execution Infrastructure</strong></p>
 
 <p align="center">
@@ -94,6 +98,20 @@ PYTHONPATH="$PWD/KAVACH/src" python -m unittest discover KAVACH/tests
 
 For the architecture and module map, start with [KAVACH/README.md](KAVACH/README.md).
 
+## ▶️ Executable protected-action demo
+
+The repository includes a real public reference demo, not a screenshot-only mock.
+
+```powershell
+$env:PYTHONPATH = "$PWD\KAVACH\src"
+python KAVACH\examples\protected_action_demo.py
+```
+
+It demonstrates:
+
+**TRUSTED → OPEN → protected execution → recovery continuity change → REFUSE(STALE_CONTINUITY) → verified evidence chain**
+
+See [KAVACH/examples/README.md](KAVACH/examples/README.md).
 ## 🧩 Repository map
 
 ```text
@@ -125,6 +143,8 @@ TRANSCRIPT/
 ```
 
 See the annotated map: [docs/REPOSITORY_MAP.md](docs/REPOSITORY_MAP.md).
+
+Public maintenance and governance: [docs/OPERATIONS.md](docs/OPERATIONS.md).
 
 ## 📦 Public release lines
 
@@ -168,3 +188,4 @@ The work represented here comes from an independent systems-engineering program 
 > **What should exist between “we trust this” and “the system is allowed to execute this”?**
 
 KAVACH is the executable answer currently published from that program.
+

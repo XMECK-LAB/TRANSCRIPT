@@ -93,6 +93,16 @@ KAVACH/
 └── tests/
 ```
 
+## Executable lifecycle demo
+
+```powershell
+$env:PYTHONPATH = "$PWD\KAVACH\src"
+python KAVACH\examples\protected_action_demo.py
+```
+
+The demo exercises the bounded SDK/runtime path and proves that recovery continuity makes earlier authority stale.
+
+See [examples/README.md](examples/README.md).
 ## Fast path
 
 ### PowerShell
@@ -174,3 +184,4 @@ See [docs/CLAIM_BOUNDARY.md](docs/CLAIM_BOUNDARY.md).
 ---
 
 **KAVACH** · Built by **Raaj Mandale** · Published under **XMECK-LAB / TRANSCRIPT**
+
