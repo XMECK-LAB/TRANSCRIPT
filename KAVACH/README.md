@@ -1,23 +1,32 @@
-<p align="center">
-  <img src="../assets/authority-flow.svg" alt="KAVACH authority lifecycle" width="100%" />
-</p>
+# KAVACH 2.0
 
-<h1 align="center">KAVACH 2.0</h1>
+## Continuity-Bound Authority & Protection Substrate
 
-<p align="center"><strong>Continuity-Bound Authority & Protection Substrate</strong></p>
+> **Authority before protected action.**
 
-<p align="center">
-  <strong>Authority before protected action.</strong><br/>
-  Software Reference / Public Engineering Preview
-</p>
+**Current public status:** Software Reference / Public Engineering Preview  
+**Parent:** TRANSCRIPT — Governed Execution Infrastructure  
+**Assurance:** `SOFTWARE_REFERENCE`
 
----
+## Start here
 
-## KAVACH in one sentence
+- **[Downloads](DOWNLOADS.md)** — package vs source archive, V1 installer, V2 software reference
+- **[Versions](VERSIONS.md)** — branches, tags, frozen release authority
+- **[Quickstart](docs/QUICKSTART.md)** — run tests and the public reference
+- **[Executable demo](examples/README.md)** — protected-action lifecycle
+- **[Claim boundary](docs/CLAIM_BOUNDARY.md)** — exact public assurance limits
 
-**KAVACH separates trust from authority, authority from execution, and execution from evidence — then binds those stages through current continuity.**
+## Current download
 
-The system is designed for protected software actions where a permission should not remain valid merely because it was valid earlier.
+**KAVACH 2.0 Software Reference**
+
+[Download `KAVACH-2.0.0-Software-Reference.zip`](https://github.com/XMECK-LAB/TRANSCRIPT/releases/download/kavach-v2.0.0/KAVACH-2.0.0-Software-Reference.zip)
+
+SDK:
+
+[Download `KAVACH-2.0.0-SDK.zip`](https://github.com/XMECK-LAB/TRANSCRIPT/releases/download/kavach-v2.0.0/KAVACH-2.0.0-SDK.zip)
+
+> The automatic GitHub **Source code (zip/tar.gz)** entries are source snapshots. They are not the packaged release asset.
 
 ## Architecture
 
@@ -25,7 +34,7 @@ The system is designed for protected software actions where a permission should 
 ProtectionRequest
       │
       ▼
-TrustContext  ←  AIRS appraisal
+TrustContext  ← AIRS appraisal
       │
       ▼
 ProtectionDecision
@@ -42,49 +51,28 @@ execution-time revalidation
 RuntimeResult
       │
       ▼
-Evidence receipt
+Authenticated evidence
 ```
 
-The public implementation is organized into three layers:
+### Core invariants
 
-| Layer | Responsibility |
-|---|---|
-| **kavach_semantic** | Canonical models, deterministic encoding, decision semantics, authority envelopes |
-| **kavach_runtime** | AIRS appraisal boundary, provider, state, IPC, evidence, execution |
-| **kavach_substrate** | Profiles, SDK, compatibility, adapters, extensions, security passport |
+1. **Trust does not directly authorize execution.**
+2. **Authority is bound, not ambient.**
+3. **Continuity is revalidated at execution.**
+4. **Recovery invalidates stale dependent authority.**
+5. **One-use authority is consumed on successful execution.**
+6. **Evidence is part of the execution model.**
 
-## Core invariants
-
-### 1. Trust does not directly authorize execution
-
-AIRS produces bounded trust context. KAVACH owns the decision.
-
-### 2. Authority is bound, not ambient
-
-A protection envelope binds authority to the exact project, workload, resource, operation, policy, provider, assurance level, and continuity vector.
-
-### 3. Continuity is checked again at execution
-
-A valid envelope can still be refused if current continuity no longer matches its declared dependencies.
-
-### 4. Recovery invalidates stale authority
-
-Recovery advances recovery continuity. Earlier recovery-dependent authority becomes stale rather than silently surviving.
-
-### 5. One-use authority is consumed only on successful execution
-
-Rejected attempts do not consume one-use authority; successful execution does.
-
-### 6. Evidence is part of the execution model
-
-Receipts bind the result back to the authority lineage and continuity state.
-
-## Public software surface
+## Public implementation
 
 ```text
 KAVACH/
+├── DOWNLOADS.md
+├── VERSIONS.md
+├── PUBLIC-MANIFEST.json
 ├── contracts/
 ├── docs/
+├── examples/
 ├── sdk/
 ├── src/
 │   ├── kavach_semantic/
@@ -93,95 +81,39 @@ KAVACH/
 └── tests/
 ```
 
-## Executable lifecycle demo
+## Run the public tests
+
+### PowerShell
+
+```powershell
+$env:PYTHONPATH = "$PWD\KAVACH\src"
+python -m unittest discover KAVACH\tests -v
+```
+
+### Bash
+
+```bash
+PYTHONPATH="$PWD/KAVACH/src" python -m unittest discover KAVACH/tests -v
+```
+
+## Run the protected-action demo
 
 ```powershell
 $env:PYTHONPATH = "$PWD\KAVACH\src"
 python KAVACH\examples\protected_action_demo.py
 ```
 
-The demo exercises the bounded SDK/runtime path and proves that recovery continuity makes earlier authority stale.
-
-See [examples/README.md](examples/README.md).
-## Fast path
-
-### PowerShell
-
-```powershell
-$env:PYTHONPATH = "$PWD\KAVACH\src"
-python -m unittest discover KAVACH\tests
-```
-
-### Bash
-
-```bash
-PYTHONPATH="$PWD/KAVACH/src" python -m unittest discover KAVACH/tests
-```
-
-Continue with [docs/QUICKSTART.md](docs/QUICKSTART.md).
-
-## Decision model
-
-| State | Meaning |
-|---|---|
-| **OPEN** | Current trust, policy, provider, assurance, continuity, and constraints admit protected execution |
-| **HOLD** | The system cannot safely admit execution yet; additional or current evidence/state is required |
-| **REFUSE** | The request conflicts with authority, policy, assurance, continuity, or another protected invariant |
-
-**HOLD is not failure and REFUSE is not uncertainty.**
-
-## Continuity model
-
-KAVACH 2.0 tracks independent continuity generations:
-
-- project
-- workload
-- provider
-- policy
-- recovery
-
-An authority envelope declares the continuity dimensions it depends on. Execution compares the envelope against current state before allowing the protected action.
-
-This turns permission into a time- and state-bound object instead of a timeless flag.
-
-## Evidence model
-
-```text
-context
-  ↓
-decision
-  ↓
-authority
-  ↓
-operation
-  ↓
-continuity
-  ↓
-provider / policy
-  ↓
-result
-  ↓
-authenticated evidence
-```
-
-The public runtime uses software-reference cryptographic mechanisms and does **not** represent itself as hardware-backed.
-
-## Compatibility
-
-KAVACH 2.0 includes a V1 compatibility projection so the historical capability/epoch model can map into the V2 continuity model without weakening stale-authority behavior.
-
-## Release line
+## Release lineage
 
 - **Current:** [KAVACH 2.0 — Software Reference](https://github.com/XMECK-LAB/TRANSCRIPT/releases/tag/kavach-v2.0.0)
 - **Historical:** [KAVACH 1.0 — Engineering Preview](https://github.com/XMECK-LAB/TRANSCRIPT/releases/tag/kavach-v1.0.0)
 
+The V2 frozen release does not claim a Windows installer. The V1 release contains the historical Windows x64 setup.
+
 ## Assurance boundary
 
-This public release demonstrates software-reference semantics. It does not claim hardware-backed authority, TPM/TEE/HSM assurance, independent security certification, formal verification, or production certification.
-
-See [docs/CLAIM_BOUNDARY.md](docs/CLAIM_BOUNDARY.md).
+This public line does not claim hardware-backed authority, TPM/TEE/HSM assurance, independent certification, formal verification, or production security certification.
 
 ---
 
 **KAVACH** · Built by **Raaj Mandale** · Published under **XMECK-LAB / TRANSCRIPT**
-
