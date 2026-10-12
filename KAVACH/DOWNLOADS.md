@@ -1,91 +1,76 @@
-# KAVACH Downloads
+# KAVACH — Distribution & Source Access
 
-This page distinguishes **source snapshots** from **packaged release assets**.
+**TRANSCRIPT / KAVACH**  
+**XMECK-AI LAB — Governed Execution Infrastructure**
 
-## Important GitHub behavior
+## Distribution Status
 
-GitHub automatically adds:
+**Packaged software distribution is temporarily suspended pending publication and security review.**
 
-- `Source code (zip)`
-- `Source code (tar.gz)`
+The TRANSCRIPT repository remains the engineering source for KAVACH, a continuity-bound authority and protection substrate.
 
-to a tag/release.
+This document does not provide external ZIP, executable, installer, or binary download links.
 
-Those archives are generated from the **Git tree at the tag**. They do **not** contain separately uploaded GitHub Release binaries such as the V1 Windows setup.
+## Published Engineering Lines
 
-## KAVACH 2.0 — Current Software Reference
+| Version | Classification | Status |
+|---|---|---|
+| KAVACH 2.0 | Software Reference / Public Engineering Preview | Source and documentation retained |
+| KAVACH 1.0 | Historical Windows Engineering Preview | Engineering history retained |
 
-**Release:** [`kavach-v2.0.0`](https://github.com/XMECK-LAB/TRANSCRIPT/releases/tag/kavach-v2.0.0)
+The version identifiers are preserved for technical traceability. Their presence does not imply that packaged downloads are currently available or approved for production deployment.
 
-### Recommended package
+## Source & Documentation
 
-**[KAVACH-2.0.0-Software-Reference.zip](https://github.com/XMECK-LAB/TRANSCRIPT/releases/download/kavach-v2.0.0/KAVACH-2.0.0-Software-Reference.zip)**
+The repository contains the following engineering resources:
 
-SHA-256:
+- `KAVACH/README.md` — architecture and subsystem overview
+- `KAVACH/VERSIONS.md` — version history and engineering lineage
+- `KAVACH/src/` — reference implementation
+- `KAVACH/sdk/` — software development interfaces
+- `KAVACH/contracts/` — authority and execution contracts
+- `KAVACH/examples/` — reference examples
+- `KAVACH/tests/` — engineering tests
+- `SECURITY.md` — security reporting and disclosure guidance
 
-```text
-F1B3DF6A3CF81E6512D3C19354CE3241AEE5804E82099629C112FDBD3E82011D
-```
+Availability of these resources depends on GitHub repository access and the current account restrictions.
 
-### SDK
+## Technical Scope
 
-**[KAVACH-2.0.0-SDK.zip](https://github.com/XMECK-LAB/TRANSCRIPT/releases/download/kavach-v2.0.0/KAVACH-2.0.0-SDK.zip)**
+KAVACH separates trust appraisal, authorization, and protected execution.
 
-SHA-256:
+Its software-reference capabilities include:
 
-```text
-8C4ACB3E77044370B3BBDB7288662E5CD7D5F45D3BD7D26713D0A04FD4BE2408
-```
+- `OPEN / HOLD / REFUSE` decision semantics
+- Bounded authority and continuity binding
+- Execution-time authorization revalidation
+- Replay resistance and authority consumption semantics
+- Recovery-dependent authority invalidation
+- Authenticated engineering evidence
 
-### Source
+These are software-reference capabilities, not claims of independent certification or hardware-backed protection.
 
-- Branch: [`release/kavach-2.x`](https://github.com/XMECK-LAB/TRANSCRIPT/tree/release/kavach-2.x)
-- Tag: [`kavach-v2.0.0`](https://github.com/XMECK-LAB/TRANSCRIPT/tree/kavach-v2.0.0)
+## Publication & Security Policy
 
-### Windows status
+Future packaged releases will require appropriate engineering qualification, artifact integrity checks, provenance documentation, and compliance with GitHub's applicable policies.
 
-**No Windows installer is admitted by the frozen KAVACH 2.0 release.**
+No external binary distribution or third-party executable hosting is promoted by this document.
 
-Windows GUI screenshots document a real engineering surface, but screenshot evidence alone does not create a qualified installer release.
+Historical source and version records are maintained for engineering continuity.
 
----
+## Assurance Limitations
 
-## KAVACH 1.0 — Historical Windows Engineering Preview
+KAVACH's public software-reference line does not establish:
 
-**Release:** [`kavach-v1.0.0`](https://github.com/XMECK-LAB/TRANSCRIPT/releases/tag/kavach-v1.0.0)
+- Independent security certification
+- Hardware-backed authority
+- Formal verification
+- Vulnerability-free operation
+- Production-grade security assurance
 
-### Windows x64 setup
+## Maintainer
 
-**[KAVACH-1.0.0-Windows-x64-Setup.exe](https://github.com/XMECK-LAB/TRANSCRIPT/releases/download/kavach-v1.0.0/KAVACH-1.0.0-Windows-x64-Setup.exe)**
+**XMECK-AI LAB**  
+TRANSCRIPT / KAVACH Engineering Program
 
-SHA-256:
-
-```text
-4CA6D3BB5BE76632EEB53F9A00B123CEE36AFD7A9B365478C82316F733E0275F
-```
-
-Status:
-
-- historical engineering preview;
-- unsigned;
-- not production-certified;
-- trusted publisher signing is not claimed.
-
-### Source
-
-- Branch: [`release/kavach-1.x`](https://github.com/XMECK-LAB/TRANSCRIPT/tree/release/kavach-1.x)
-- Tag: [`kavach-v1.0.0`](https://github.com/XMECK-LAB/TRANSCRIPT/tree/kavach-v1.0.0)
-
-Again: the automatic GitHub Source ZIP is the source projection, **not** the setup EXE.
-
----
-
-## Which file should I choose?
-
-| Goal | File |
-|---|---|
-| Evaluate current KAVACH semantics/source | `KAVACH-2.0.0-Software-Reference.zip` |
-| Integrate against current bounded SDK surface | `KAVACH-2.0.0-SDK.zip` |
-| Inspect exact V2 tagged Git source | GitHub `Source code (zip)` or `release/kavach-2.x` |
-| Run the historical Windows preview | `KAVACH-1.0.0-Windows-x64-Setup.exe` |
-| Inspect exact V1 historical source projection | GitHub `Source code (zip)` or `release/kavach-1.x` |
+**Publication status:** Packaged distribution suspended pending review.
