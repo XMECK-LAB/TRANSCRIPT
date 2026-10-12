@@ -1,240 +1,140 @@
-<p align="center">
-  <img src="assets/kavach-orb-hud.svg" alt="KAVACH — Continuity-Bound Authority & Protection Substrate" width="100%" />
-</p>
+<div align="center">
 
-<h1 align="center">TRANSCRIPT / KAVACH</h1>
+# TRANSCRIPT / KAVACH
 
-<p align="center"><strong>Governed Execution Infrastructure · Authority Before Protected Action</strong></p>
+**Governed Execution Infrastructure · Authority Before Protected Action**
 
-<p align="center">
-  <a href="https://github.com/XMECK-LAB/TRANSCRIPT/actions/workflows/public-reference-ci.yml"><img src="https://github.com/XMECK-LAB/TRANSCRIPT/actions/workflows/public-reference-ci.yml/badge.svg" alt="Public Reference CI" /></a>
-</p>
+**XMECK-AI LAB · Public Engineering Reference**
 
-<p align="center">
-  <a href="https://github.com/XMECK-LAB/TRANSCRIPT/releases/tag/kavach-v2.0.0"><strong>🛡️ KAVACH 2.0</strong></a>
-  · <a href="KAVACH/DOWNLOADS.md"><strong>⬇️ Downloads</strong></a>
-  · <a href="KAVACH/VERSIONS.md">Versions</a>
-  · <a href="KAVACH/README.md">Architecture</a>
-  · <a href="demo/index.html">Demo HTML</a>
-  · <a href="SECURITY.md">Security</a>
-</p>
+[Architecture](docs/ARCHITECTURE.md) · [KAVACH](KAVACH/README.md) · [Version History](KAVACH/VERSIONS.md) · [Demonstration](demo/index.html) · [Security](SECURITY.md)
+
+</div>
 
 ---
 
-## ⬇️ Get KAVACH
+## Purpose
 
-> **GitHub’s automatic “Source code (zip/tar.gz)” archives contain the Git tree at a tag. They do not contain separately uploaded GitHub Release binaries.**  
-> Use the explicit release downloads below when you want the packaged artifact.
+TRANSCRIPT explores governed execution for software operations that require more than a trust assessment before an action is allowed. KAVACH is the public authority-and-continuity reference within this engineering line.
 
-| Release line | What it is | Recommended download | Source |
-|---|---|---|---|
-| **KAVACH 2.0 — Current** | Continuity-bound authority/protection **Software Reference** | **[Software Reference ZIP](https://github.com/XMECK-LAB/TRANSCRIPT/releases/download/kavach-v2.0.0/KAVACH-2.0.0-Software-Reference.zip)** · [SDK ZIP](https://github.com/XMECK-LAB/TRANSCRIPT/releases/download/kavach-v2.0.0/KAVACH-2.0.0-SDK.zip) | [`release/kavach-2.x`](https://github.com/XMECK-LAB/TRANSCRIPT/tree/release/kavach-2.x) · [`kavach-v2.0.0`](https://github.com/XMECK-LAB/TRANSCRIPT/tree/kavach-v2.0.0) |
-| **KAVACH 1.0 — Historical** | Runnable Windows Engineering Preview | **[Windows x64 Setup](https://github.com/XMECK-LAB/TRANSCRIPT/releases/download/kavach-v1.0.0/KAVACH-1.0.0-Windows-x64-Setup.exe)** | [`release/kavach-1.x`](https://github.com/XMECK-LAB/TRANSCRIPT/tree/release/kavach-1.x) · [`kavach-v1.0.0`](https://github.com/XMECK-LAB/TRANSCRIPT/tree/kavach-v1.0.0) |
-
-**V1 installer SHA-256**
-
-```text
-4CA6D3BB5BE76632EEB53F9A00B123CEE36AFD7A9B365478C82316F733E0275F
-```
-
-**Important:** the frozen KAVACH 2.0 release does **not** claim a Windows installer. Its admitted packaged artifact is the software-reference ZIP. See [KAVACH/DOWNLOADS.md](KAVACH/DOWNLOADS.md).
-
----
-
-## ⚡ What TRANSCRIPT is
-
-**TRANSCRIPT is governed execution infrastructure for software actions that should not proceed on trust alone.**
-
-Its first public subsystem is **KAVACH** — the continuity-bound authority and protection substrate that separates:
+The guiding distinction is:
 
 > **Trust ≠ Authority ≠ Execution**
 
-and requires current continuity before protected execution.
+An assessed identity or context does not by itself grant permission to execute. A protected action requires an applicable, bounded authorization decision and a final validity check at execution time.
+
+## Execution model
 
 ```text
-IDENTITY / CONTEXT
-        ↓
-       AIRS
-  trust appraisal
-        ↓
-      KAVACH
- OPEN / HOLD / REFUSE
-        ↓
-      K-LOCK
- bounded authority
-        ↓
- execution-time
-  revalidation
-        ↓
- PROTECTED ACTION
-        ↓
- AUTHENTICATED
-    EVIDENCE
+Identity / Context
+       |
+       v
+Trust appraisal (AIRS boundary)
+       |
+       v
+KAVACH decision: OPEN / HOLD / REFUSE
+       |
+       v
+Bounded authority (K-LOCK)
+       |
+       v
+Execution-time revalidation
+       |
+       v
+Protected action (if still authorized)
+       |
+       v
+Authenticated evidence / receipts
 ```
 
----
+This diagram communicates the intended reference flow; it is not a blanket assurance claim for third-party environments.
 
-## 🛡️ KAVACH 2.0 — current public line
+## KAVACH public engineering lines
 
-KAVACH 2.0 is the current public **Software Reference / Public Engineering Preview**.
+| Line | Role | Assurance boundary |
+| --- | --- | --- |
+| **KAVACH 2.0** | Current software-reference engineering line | `SOFTWARE_REFERENCE` |
+| **KAVACH 1.0** | Historical Windows engineering-preview line | Historical engineering evidence; not a production-security certification |
 
-| Capability | Public surface |
-|---|---|
-| **Decision semantics** | `OPEN` / `HOLD` / `REFUSE` |
-| **Authority binding** | project, workload, resource, operation, provider, policy, continuity |
-| **Continuity** | project / workload / provider / policy / recovery generations |
-| **Execution control** | authority is revalidated before protected execution |
-| **Replay behavior** | one-use authority + consumption semantics |
-| **Recovery behavior** | recovery invalidates stale recovery-dependent authority |
-| **Evidence** | authenticated append-oriented receipts |
-| **SDK** | bounded consumer surface; no direct “set OPEN” authority |
-| **Assurance** | `SOFTWARE_REFERENCE` |
+Publication of packaged binaries and archives is **temporarily suspended pending a distribution-policy and provenance review**. This README intentionally provides **no ZIP, installer, executable, or externally hosted binary download links**. The repository's reference source and documentation remain available for inspection.
 
-### ▶️ Executable reference demo
+For source-line context, see [Version History](KAVACH/VERSIONS.md). A listed source branch or tag indicates version history, not independent security certification.
+
+## Capabilities represented in the KAVACH 2.0 reference
+
+| Area | Reference behavior |
+| --- | --- |
+| Decision | `OPEN`, `HOLD`, `REFUSE` |
+| Scope | Authority bounded to relevant project, workload, resource, operation, provider and policy context |
+| Continuity | Generation-based continuity checks for relevant contexts |
+| Enforcement | Authority rechecked immediately before protected execution |
+| Replay control | Single-use / consumption semantics where implemented by the reference |
+| Recovery | Prior authority may become stale when recovery continuity advances |
+| Evidence | Append-oriented authenticated receipts in the reference model |
+| Consumer SDK | Governed consumer interfaces rather than arbitrary authority elevation |
+
+Behavior should be assessed against source, tests, and actual integration conditions; this table does not promise enforcement outside the reference boundary.
+
+## Local source reference demonstration
+
+The repository includes a Python example at `KAVACH/examples/protected_action_demo.py`. In a local clone, with a supported Python environment and required dependencies in place, the reference demonstration can be invoked from the repository root:
 
 ```powershell
 git clone https://github.com/XMECK-LAB/TRANSCRIPT.git
 cd TRANSCRIPT
-
 $env:PYTHONPATH = "$PWD\KAVACH\src"
 python KAVACH\examples\protected_action_demo.py
 ```
 
-Expected reference path:
+The intended demonstration concerns authorization, protected execution, continuity advancement, stale-authority refusal, and evidence checks. Consult the local source and tests for precise runnable behavior and prerequisites.
 
-**TRUSTED → OPEN → protected execution → recovery continuity advances → old authority REFUSE(STALE_CONTINUITY) → evidence verified**
+## Repository navigation
 
----
+| Area | Description |
+| --- | --- |
+| [`KAVACH/README.md`](KAVACH/README.md) | KAVACH subsystem architecture and usage scope |
+| [`KAVACH/VERSIONS.md`](KAVACH/VERSIONS.md) | Lineage, branches and version boundaries |
+| [`KAVACH/contracts/`](KAVACH/contracts/) | Authority interfaces and contracts |
+| [`KAVACH/src/`](KAVACH/src/) | Reference implementation |
+| [`KAVACH/sdk/`](KAVACH/sdk/) | Consumer integration surfaces |
+| [`KAVACH/examples/`](KAVACH/examples/) | Reference exercises |
+| [`KAVACH/tests/`](KAVACH/tests/) | Qualification and regression tests |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Execution architecture |
+| [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md) | Position within XMECK-AI LAB |
+| [`docs/OPERATIONS.md`](docs/OPERATIONS.md) | Operational notes |
+| [`demo/index.html`](demo/index.html) | Conceptual Orb/HUD architecture demo |
+| [`assets/screenshots/README.md`](assets/screenshots/README.md) | Engineering UI image index |
+| [`SECURITY.md`](SECURITY.md) | Security reporting guidance |
 
-## 🖥️ Product surfaces
+Visual designs, screenshots and the HTML demonstration are **illustrative engineering surfaces**. They do not independently prove runtime enforcement, platform integration, or security certification.
 
-These screenshots are **visual evidence of real KAVACH Windows engineering surfaces**. They do not expand the public assurance claim.
+## Source and version integrity
 
-### KAVACH 2.0 — runtime-backed Windows surface
+The public source model distinguishes ongoing `main` maintenance from versioned engineering lineages. Existing version tags and release history should remain unchanged during documentation remediation. This README change is not a new KAVACH version and makes no claim to requalify historical binaries.
 
-<p align="center">
-  <img src="assets/screenshots/kavach-v2/kavach-v2-overview.png" alt="KAVACH 2.0 Overview" width="92%" />
-</p>
+## Security and assurance boundaries
 
-<p align="center">
-  <a href="assets/screenshots/kavach-v2/kavach-v2-guided-action.png">Guided Action</a>
-  · <a href="assets/screenshots/kavach-v2/kavach-v2-sdk-api.png">SDK / API</a>
-  · <a href="assets/screenshots/kavach-v2/kavach-v2-evidence-lineage.png">Evidence</a>
-  · <a href="assets/screenshots/kavach-v2/kavach-v2-integrations.png">Integrations</a>
-  · <a href="assets/screenshots/kavach-v2/kavach-v2-consumer-admission.png">Consumer Admission Boundary</a>
-</p>
+The public KAVACH 2.0 software reference **does not** claim:
 
-### KAVACH 1.0 — historical Windows engineering preview
+- TPM, TEE, HSM, or hardware-backed authority enforcement;
+- formal verification or independent security certification;
+- vulnerability-free or bypass-proof operation;
+- production suitability for a particular customer environment without further validation;
+- enforcement by third-party applications unless a real integration has been implemented and tested.
 
-<p align="center">
-  <img src="assets/screenshots/kavach-v1/kavach-v1-operational-overview.png" alt="KAVACH 1.0 Operational Overview" width="92%" />
-</p>
+For disclosure and security-related communications, see [SECURITY.md](SECURITY.md).
 
-Full gallery: [assets/screenshots/README.md](assets/screenshots/README.md)
+## Publication and distribution policy
 
----
+This repository is intended for transparent engineering review. External links to downloadable ZIP files, installers, or executables are not included here. Any future packaged release must undergo content review, provenance/integrity validation, and compliance assessment before distribution is restored. Repository maintainers should also review release descriptions, other documentation, issues, pull requests and organization/profile pages for obsolete download references.
 
-## 🌐 Interactive visual demo
+## Project identity
 
-`demo/index.html` is a self-contained HTML/CSS/JS architecture demonstration with a KAVACH Orb/HUD and the authority lifecycle.
+**TRANSCRIPT** — governed execution infrastructure.  
+**KAVACH** — authority, continuity and protected-action reference subsystem.  
+**XMECK-AI LAB** — publishing engineering organization.
 
-It is intentionally a **visual architecture/demo surface**. The authoritative executable proof remains `KAVACH/examples/protected_action_demo.py`.
+Independent engineering project by **Raaj Mandale**, published under **XMECK-AI LAB**.
 
-[Open the demo source →](demo/index.html)
+> What should exist between *“we trust this”* and *“the system is allowed to execute this”*?
 
----
-
-## 🧭 Version / source / release model
-
-| Surface | Meaning |
-|---|---|
-| `main` | current public maintenance, documentation, CI, examples, visual evidence |
-| `release/kavach-2.x` | frozen KAVACH 2.0 source projection |
-| `kavach-v2.0.0` | frozen KAVACH 2.0 release tag |
-| `release/kavach-1.x` | frozen historical KAVACH 1.0 source projection |
-| `kavach-v1.0.0` | frozen historical KAVACH 1.0 release tag |
-| GitHub Release assets | packaged downloads; **not** automatically embedded in source archives |
-
-See [KAVACH/VERSIONS.md](KAVACH/VERSIONS.md) and [KAVACH/DOWNLOADS.md](KAVACH/DOWNLOADS.md).
-
----
-
-## 🧩 Repository tree
-
-```text
-XMECK-LAB / TRANSCRIPT
-│
-├── README.md
-├── SECURITY.md
-├── assets/
-│   ├── kavach-orb-hud.svg
-│   └── screenshots/
-├── demo/
-│   └── index.html
-├── docs/
-│   ├── ARCHITECTURE.md
-│   ├── ECOSYSTEM.md
-│   ├── OPERATIONS.md
-│   ├── PUBLICATION.md
-│   └── REPOSITORY_MAP.md
-└── KAVACH/
-    ├── README.md
-    ├── DOWNLOADS.md
-    ├── VERSIONS.md
-    ├── PUBLIC-MANIFEST.json
-    ├── contracts/
-    ├── docs/
-    ├── examples/
-    ├── sdk/
-    ├── src/
-    └── tests/
-```
-
----
-
-## 🧠 XMECK ecosystem position
-
-```text
-XMECK-LAB
-└── TRANSCRIPT
-    └── KAVACH
-        ├── Trust appraisal boundary
-        ├── Bounded authority
-        ├── Continuity
-        ├── Protected execution
-        └── Evidence / proof
-```
-
-KAVACH is published beneath **TRANSCRIPT**, the governed-execution line. Other XMECK engineering/product lines remain separate unless independently admitted through a real integration contract and implementation.
-
-See [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md).
-
----
-
-## 🔬 Assurance boundary
-
-The current KAVACH 2.0 public release demonstrates **software-reference semantics**.
-
-It does **not** claim:
-
-- hardware-backed authority;
-- TPM / TEE / HSM assurance;
-- independent security certification;
-- formal verification;
-- vulnerability-free operation;
-- production security certification.
-
-KAVACH 1.0 is an unsigned historical Windows Engineering Preview.
-
----
-
-## 👤 Independent engineering
-
-**Designed and built by Raaj Mandale**  
-**Published under XMECK-LAB**
-
-The engineering question behind KAVACH is simple:
-
-> **What should exist between “we trust this” and “the system is allowed to execute this”?**
-
-KAVACH is the public executable/reference answer currently published from that program.
+The KAVACH public reference explores that boundary through explicit decisions, bounded authority, execution-time checking and evidence.
