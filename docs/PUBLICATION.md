@@ -2,6 +2,8 @@
 
 This repository has two distinct public layers:
 
+**Current public distribution status (2026-10-13): HOLD.** Packaged binaries and archives remain attached to historical GitHub Releases but are not presently recommended for installation or new distribution. No tag, release asset or historical sourcepoint is changed by this notice. See [KAVACH distribution status](../KAVACH/DOWNLOADS.md).
+
 ## Release authority
 
 The immutable release lines are represented by tags and GitHub Releases:
