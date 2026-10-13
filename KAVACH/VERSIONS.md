@@ -7,6 +7,8 @@
 | **KAVACH 2.0** | `release/kavach-2.x` | `kavach-v2.0.0` | Current Software Reference | Software Reference ZIP + SDK ZIP |
 | **KAVACH 1.0** | `release/kavach-1.x` | `kavach-v1.0.0` | Historical Windows Engineering Preview | Windows x64 Setup |
 
+**Distribution notice (2026-10-13):** Packaged artifact distribution is suspended pending security, license, provenance and installation qualification. Historical release assets may still be attached; their presence is not an installation recommendation. See [distribution status](DOWNLOADS.md).
+
 ## Frozen authority
 
 ### V2
