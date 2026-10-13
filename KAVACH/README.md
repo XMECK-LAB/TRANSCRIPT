@@ -10,23 +10,15 @@
 
 ## Start here
 
-- **[Downloads](DOWNLOADS.md)** — package vs source archive, V1 installer, V2 software reference
+- **[Distribution status](DOWNLOADS.md)** — packaged distribution is suspended pending review
 - **[Versions](VERSIONS.md)** — branches, tags, frozen release authority
 - **[Quickstart](docs/QUICKSTART.md)** — run tests and the public reference
 - **[Executable demo](examples/README.md)** — protected-action lifecycle
 - **[Claim boundary](docs/CLAIM_BOUNDARY.md)** — exact public assurance limits
 
-## Current download
+## Distribution status
 
-**KAVACH 2.0 Software Reference**
-
-[Download `KAVACH-2.0.0-Software-Reference.zip`](https://github.com/XMECK-LAB/TRANSCRIPT/releases/download/kavach-v2.0.0/KAVACH-2.0.0-Software-Reference.zip)
-
-SDK:
-
-[Download `KAVACH-2.0.0-SDK.zip`](https://github.com/XMECK-LAB/TRANSCRIPT/releases/download/kavach-v2.0.0/KAVACH-2.0.0-SDK.zip)
-
-> The automatic GitHub **Source code (zip/tar.gz)** entries are source snapshots. They are not the packaged release asset.
+Packaged ZIP/EXE distribution is suspended pending independent security, licensing, provenance and artifact qualification. Historical uploaded GitHub Release assets may remain accessible but are not currently endorsed for installation. See [distribution status](DOWNLOADS.md) and [publication policy](../docs/PUBLICATION.md).
 
 ## Architecture
 
